@@ -9,16 +9,24 @@
       safari_web_id: "web.onesignal.auto.31ba082c-c81b-42a5-be17-ec59d526e60e",
       serviceWorkerPath: "/sciencetopper-/OneSignalSDKWorker.js",
       serviceWorkerParam: { scope: "/sciencetopper-/" },
-      notifyButton: {
-        enable: true,
-      },
+      notifyButton: { enable: true },
       promptOptions: {
         slidedown: {
-          prompts: [
-            {
-              type: "push",
-              autoPrompt: true,
-              text: {
+          prompts: [{
+            type: "push",
+            autoPrompt: true,
+            text: {
+              actionMessage: "Get notified about new quizzes!",
+              acceptButton: "Allow",
+              cancelButton: "No Thanks"
+            },
+            delay: { pageViews: 1, timeDelay: 3 }
+          }]
+        }
+      }
+    });
+  });
+</script>
                 actionMessage: "ScienceTopper wants to send you notifications about new quizzes and results!",
                 acceptButton: "Allow",
                 cancelButton: "No Thanks",
